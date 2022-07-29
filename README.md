@@ -1,13 +1,12 @@
-# suneratech
-Microservices Training
+# suneratech Microservices Training
 
-- JDK-11:
+# JDK-11:
 https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 
-JDK-8 : 
+# JDK-8 : 
 https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
-Spring Boot Links:
+# Spring Boot Links:
 https://start.spring.io
 https://spring.io/projects
 https://spring.io/projects/spring-boot
@@ -17,12 +16,12 @@ https://spring.io/guides/gs/spring-boot/
 https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-documentation
 
 
-Maven Commands:
+# Maven Commands:
 mvnw clean install -Dmaven.test.skip=true
 mvnw clean
 mvnw clean package -Dmaven.test.skip=true
 
-Dependencies: 
+# Dependencies: 
 Web, Jpa, H2
 swagger:
 		<dependency>
@@ -34,9 +33,9 @@ swagger:
 application.properties:
 server.port=8080
 
-#H2-Inmemory DB-console --> http://localhost:8080/h2-console
+# H2-Inmemory DB-console --> http://localhost:8080/h2-console
 spring.h2.console.enabled=true
-#Hibernate/JPA
+# Hibernate/JPA
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 spring.datasource.url=jdbc:h2:mem:testdb
@@ -45,7 +44,7 @@ spring.datasource.username=sa
 spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=create
 
-#Actuator
+# Actuator
 management.endpoints.web.exposure.include=*
 
 spring data jpa:
@@ -55,21 +54,21 @@ https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-me
 spring data jpa with mysql:
 https://spring.io/guides/gs/accessing-data-mysql/
 
-#Actuator Doc:
+# Actuator Doc:
 https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html
 Customize: 
 https://www.baeldung.com/spring-boot-actuators
 
-#Actuator
+# Actuator
 management.endpoints.web.exposure.include=*
 management.endpoint.web.exposure.exclude=beans
 
-#/actuator/beans
+# actuator/beans
 endpoints.beans.id=springbeans
 endpoints.beans.sensitive=false
 endpoints.beans.enabled=true
 
-#/actuator/info
+#/ actuator/info
 info.app.name=Actuator-App
 info.app.description=My Edu App
 info.app.version=1.2.3
