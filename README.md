@@ -30,6 +30,10 @@ swagger:
 			<version>1.6.9</version>
 		</dependency>
 		
+# Swagger-url:
+http://localhost:8080/swagger-ui/index.html
+http://localhost:8081/v3/api-docs/
+		
 application.properties:
 server.port=8080
 
@@ -63,12 +67,12 @@ https://www.baeldung.com/spring-boot-actuators
 management.endpoints.web.exposure.include=*
 management.endpoint.web.exposure.exclude=beans
 
-# actuator/beans
+# /actuator/beans
 endpoints.beans.id=springbeans
 endpoints.beans.sensitive=false
 endpoints.beans.enabled=true
 
-#/ actuator/info
+# /actuator/info
 info.app.name=Actuator-App
 info.app.description=My Edu App
 info.app.version=1.2.3

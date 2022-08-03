@@ -2,6 +2,9 @@ package com.example.demo.model;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "user_data")
@@ -9,6 +12,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @NotBlank
+    @Size(min = 3, max = 5)
     private String name;
     private String firstName;
     private String lastName;
