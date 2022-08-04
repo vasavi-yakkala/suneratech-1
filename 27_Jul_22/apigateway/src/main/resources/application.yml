@@ -27,9 +27,9 @@ spring:
         - id: firstms
           uri: lb://FIRSTMS
           predicates:
-            - Path= /dummy-firtms/**
+            - Path= /dummy-firstms/**
           filters:
-            - RewritePath= /dummy-firtms/(?<path>.*), /$\{path}
+            - RewritePath= /dummy-firstms/(?<path>.*), /$\{path}
         - id: firstms-client
           uri: lb://FIRSTMS-CLIENT
           predicates:
