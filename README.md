@@ -95,6 +95,10 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8085
 		
 
 Config-server:
+http://localhost:9999/config-client/default
+http://localhost:8085/properties
+curl -X POST http://localhost:8085/actuator/refresh -v
+
 
 
 API Gateway:
@@ -107,3 +111,7 @@ curl -X POST -d grant_type=client_credentials http://client:secret@localhost:900
 
 curl -X GET http://localhost:8080/actuator/gateway/routes -v -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY1OTcxODUzNSwianRpIjoiY2U4ZTEyNDMtZTQ5YS00NTIxLWIzZWUtZDE4YmIzMTlmYzJkIiwiY2xpZW50X2lkIjoiY2xpZW50In0.myNynHDa73XdoDmx9D3Y3UE72jWiSQp2eQwVvTUd4yU"
 curl -X GET http://localhost:8080/dummy-firstms/hello -v -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY1OTcxODUzNSwianRpIjoiY2U4ZTEyNDMtZTQ5YS00NTIxLWIzZWUtZDE4YmIzMTlmYzJkIiwiY2xpZW50X2lkIjoiY2xpZW50In0.myNynHDa73XdoDmx9D3Y3UE72jWiSQp2eQwVvTUd4yU"
+
+
+MCQ Link:
+https://docs.google.com/forms/d/e/1FAIpQLScSPFV8PmneKkIT6zJEAU81-xd8XBBMEy7rAauPsLSB6x-8tg/viewform?vc=0&c=0&w=1&flr=0
