@@ -86,3 +86,24 @@ java -jar orderms.jar --server.port=8082 --spring.profiles.active=prod
 java -jar orderms.jar --server.port=8083
 mvn spring-boot:run
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8085
+
+# xml
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+		
+
+Config-server:
+
+
+API Gateway:
+http://localhost:8080/actuator/gateway/routes
+http://localhost:8080/dummy/hello-client
+
+
+Oauth2 Security:
+curl -X POST -d grant_type=client_credentials http://client:secret@localhost:9000/oauth/token
+
+curl -X GET http://localhost:8080/actuator/gateway/routes -v -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY1OTcxODUzNSwianRpIjoiY2U4ZTEyNDMtZTQ5YS00NTIxLWIzZWUtZDE4YmIzMTlmYzJkIiwiY2xpZW50X2lkIjoiY2xpZW50In0.myNynHDa73XdoDmx9D3Y3UE72jWiSQp2eQwVvTUd4yU"
+curl -X GET http://localhost:8080/dummy-firstms/hello -v -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY1OTcxODUzNSwianRpIjoiY2U4ZTEyNDMtZTQ5YS00NTIxLWIzZWUtZDE4YmIzMTlmYzJkIiwiY2xpZW50X2lkIjoiY2xpZW50In0.myNynHDa73XdoDmx9D3Y3UE72jWiSQp2eQwVvTUd4yU"
